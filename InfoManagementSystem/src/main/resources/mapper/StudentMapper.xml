@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper SYSTEM "myorm.dtd">
+<mapper namespace="com.example.InfoManagement.mapper.StudentMapper">
+    <select id="selectStudentByNo" parameterType="java.lang.String" resultType="com.example.InfoManagement.entity.Student">
+        select * from student where no=#{no}
+    </select>
+    <select id="selectAllStu" resultType="com.example.InfoManagement.entity.Student">
+        select s.no,s.name,c.class_name class_name,s.department,s.major,s.admission_date from student s join class c on s.class_no=c.no
+    </select>
+    <select id="selectStuList" resultType="com.example.InfoManagement.entity.Student">
+        select s.no,s.name,c.class_name class_name,s.department,s.major,s.admission_date from student s join class c on s.class_no=c.no limit #{startNo},#{pageSize}
+    </select>
+    <select id="queryStuNum" resultType="java.lang.Long"></select>
+    <insert id="insertStu"></insert>
+    <update id="updateStuByNo"></update>
+    <delete id="deleteStuByNo" parameterType="java.lang.Integer"></delete>
+</mapper>

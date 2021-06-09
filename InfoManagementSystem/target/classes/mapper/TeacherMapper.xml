@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper SYSTEM "myorm.dtd">
+<mapper namespace="com.example.InfoManagement.mapper.TeacherMapper">
+
+</mapper>

@@ -1,0 +1,34 @@
+<!ELEMENT mapper (select* | insert* | update* | delete* | sql*)+>
+
+<!ELEMENT select (#PCDATA | select)*>
+
+<!ELEMENT insert (#PCDATA)>
+<!ELEMENT update (#PCDATA)>
+<!ELEMENT delete (#PCDATA)>
+<!ELEMENT sql (#PCDATA)>
+
+<!ATTLIST mapper namespace CDATA #IMPLIED>
+
+<!ATTLIST select
+id CDATA #REQUIRED
+parameterType CDATA #IMPLIED
+resultType CDATA #IMPLIED
+>
+
+<!ATTLIST delete
+id CDATA #REQUIRED
+parameterMap CDATA #IMPLIED
+parameterType CDATA #IMPLIED
+>
+
+<!ATTLIST insert
+id CDATA #REQUIRED
+parameterMap CDATA #IMPLIED
+parameterType CDATA #IMPLIED
+>
+
+<!ATTLIST update
+id CDATA #REQUIRED
+parameterMap CDATA #IMPLIED
+parameterType CDATA #IMPLIED
+>
