@@ -28,6 +28,7 @@ JQuery、Ajax：异步访问、页面的局部更新
  
  ![editStuInfo](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/editStuInfo.56aw3juxg280.png)
 图3 学生信息编辑页面
+
 学生信息修改功能：
 	点击班级下拉框会从数据库查询当前数据库中班级表中存储的所有班级名称，并返回到浏览器，以下拉框的形式展示（通过JQuery、Ajax异步访问实现），此操作限制了学生可以选择的班级，建立起学生与班级的联系。
 	学号不可修改（readonly属性）、其他的input框有（required属性）、若点击确认时为空、会提示 “未填写、需要填写”。点击确认，会在数据库修改对应学生的信息（根据学号（主键）修改），若入学日期输入不符合规范时，服务端会将入学日期设置为当前时间（通过正则表达式实现）。点击取消，模态框消失会返回学生信息页面。
@@ -36,11 +37,13 @@ JQuery、Ajax：异步访问、页面的局部更新
  
  ![delStuInfo](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/delStuInfo.q3x6wobm9g.png)
 图4 学生信息删除页面
+
 学生信息删除功能：
 	点击是，会从数据库中删除相应学生的信息（根据学号（主键）删除）。点击否，模态框消失会返回学生信息页面。
  
  ![addStuInfo](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/addStuInfo.28x66xdahejo.png)
 图5 添加学生信息页面
+
 添加学生信息功能：
 	实现细节与修改学生类似，不再赘述。
 翻页查看功能：
@@ -50,6 +53,7 @@ JQuery、Ajax：异步访问、页面的局部更新
 
  ![SearchStuInfo](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/SearchStuInfo.2x1q0zxvsfu0.png)
 图6 查询学生信息页面
+
 查询学生信息功能：
 	在搜索框中输入查询学生的任何关键字（学号、姓名、院系、专业、班级、入学日期），按下回车键，服务端会先从数据库中查询所有学生的信息，后将所有匹配到的学生信息发送给客户端由浏览器显示。
 查询效果，如图6
@@ -69,6 +73,7 @@ JQuery、Ajax：异步访问、页面的局部更新
  
  ![chanPass](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/chanPass.4euetaj6itu0.png)
 图8修改密码页面
+
 修改密码功能：
 	输入新密码，点击提交，会在数据库中修改相应用户（管理员）的密码（根据用户名修改，此处使用MD5对密码进行加密（登录验证时同样也会使用MD5加密后进行比较验证））。
 
@@ -77,6 +82,7 @@ JQuery、Ajax：异步访问、页面的局部更新
  
  ![loginOut](https://raw.githubusercontent.com/GitHub-anonymousV/Gallery/master/GitHub-Imgs/loginOut.65qhqo93o2w0.png)
 图9退出登录页面
-	点击是，会从服务端移除Session储存的登录标志，并重定向到登录页面。点击否，会返回原界面。
+
+点击是，会从服务端移除Session储存的登录标志，并重定向到登录页面。点击否，会返回原界面。
 
 有关持久层使用的简化版ORM-Mybatis详细信息参见: https://github.com/GitHub-anonymousV/orm-mybatis
