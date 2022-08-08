@@ -85,4 +85,4 @@ JQuery、Ajax：异步访问、页面的局部更新
 
 点击是，会从服务端移除Session储存的登录标志，并重定向到登录页面。点击否，会返回原界面。
 
-有关持久层使用的简化版ORM-Mybatis详细信息参见: https://github.com/GitHub-anonymousV/orm-mybatis
+有关持久层使用的简化版ORM-Mybatis详细信息参见: https://github.com/Feyl/orm-mybatis
